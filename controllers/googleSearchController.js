@@ -2,11 +2,11 @@ import Scraper from "../utils/scraper.js";
 import Parser from "../utils/parser.js";
 
 /**
- * La función asíncrona busca en Google los enlaces relacionados con el término de búsqueda.
+ * Es una función asíncrona busca en Google los enlaces relacionados con el término de búsqueda.
  * @async
  * @function searchLinks
- * @param {string} query - Término de búsqueda a utilizar en Google.
- * @returns {Promise<Array<string>>} - Una promesa que se resuelve con un array de enlaces encontrados en la búsqueda.
+ * @param {string} query -Término de búsqueda a utilizar en Google.
+ * @returns {Promise<Array<string>>} -Promesa que se resuelve con un array de enlaces encontrados en la búsqueda.
  */
 async function searchLinks(query) {
 //scraper: instancia para solicitudes HTTP a la página de Google y obtener su contenido en formato string.

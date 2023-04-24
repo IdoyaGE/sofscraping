@@ -9,18 +9,18 @@ import sofController from "../../controllers/sofController";
 describe ("sof controller", () => {
     it('Deberia conseguir el contenido de una pagina de stackoverflow', async()=> {
 /**
-     * @type {string} -query para la búsqueda de en la web de stackoverflow.
+     * @type {string} - Query para la búsqueda en la web de stackoverflow.
      */
         const query = "promesa";
  /**
-     * @typedef {Object} SofContent - Objeto que contiene el contenido de la web de Stackoverflow.
-     * @property {string} title - Título.
-     * @property {Object} question - Pregunta.
-     * @property {string} question.question - Contenido de la pregunta.
-     * @property {string} question.votes - Votos de la pregunta.
-     * @property {string} question.date - Fecha de la pregunta.
-     * @property {string} question.user - Usuario de la pregunta.
-     * @property {Array<Object>} answer - Array del objeto.
+     * @typedef {Object} SofContent -Objeto que contiene el contenido de la web de Stackoverflow.
+     * @property {string} title -Título de la pregunta.
+     * @property {Object} question -Pregunta.
+     * @property {string} question.question -Contenido de la pregunta.
+     * @property {string} question.votes -Votos de la pregunta.
+     * @property {string} question.date -Fecha de la pregunta.
+     * @property {string} question.user -Usuario que ha realizado la pregunta.
+     * @property {Array<Object>} answer -Array del objeto pregunta.
      */
         const {title, question, answer} = await sofController.getContent(query); 
         expect(title).toContain('promesa'); 
@@ -35,5 +35,5 @@ describe ("sof controller", () => {
         expect (answerUser[0].user).toBe('gugadev');
         
        
-    },20000);
+    },20000); //timeout 
 });

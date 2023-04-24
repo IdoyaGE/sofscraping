@@ -14,7 +14,7 @@ const host = "localhost";
 
 /**
  * Puerto en el que se ejecuta la base de datos.
- * Si la variable de entorno MONGO_PORT no está definida, se usará el puerto 27018 por defecto.
+ * Si la variable de entorno MONGO_PORT no está definida, se usará el puerto 27021 por defecto.
  * @constant {(string|number)}
  * @default
  */
@@ -39,8 +39,8 @@ const MONGODB_URI = `mongodb://${host}:${port}/${db}`;
  * Conexión a la base de datos MongoDB utilizando Mongoose.
  * @function
  * @async
- * @returns {Promise} - Promesa que se resuelve una vez se ha establecido la conexión.
- * @throws {Error} - Error si no se puede conectar a la base de datos.
+ * @returns {Promise} -Promesa que se resuelve una vez se ha establecido la conexión.
+ * @throws {Error} -Error si no se puede conectar a la base de datos.
  */
 mongoose.connect(MONGODB_URI, {
   useNewUrlParser: true, // Opciones de configuración para la conexión

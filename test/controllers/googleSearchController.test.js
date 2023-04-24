@@ -1,7 +1,7 @@
 /**
  * Controller para buscar en Google.
  * @typedef {Object} googleSearchController
- * @property {Function} searchLinks - Función asíncrona para buscar links a partir de una búsqueda en Google y que encuentre la página web de Stackoverflow en español.
+ * @property {Function} searchLinks -Función asíncrona para buscar links a partir de una búsqueda en Google y que encuentre la página web de Stackoverflow en español.
  */
 
 import googleSearchController from "../../controllers/googleSearchController";
@@ -13,8 +13,8 @@ describe("Google Search controller", () => {
      * @async
      * @function it
      * @memberof googleSearchController
-     * @param {string} query - La cadena de búsqueda para buscar los links.
-     * @returns {Promise} -devuelve los links correctos utilizando en método toContain
+     * @param {string} query -Cadena de búsqueda para buscar los links.
+     * @returns {Promise} -Devuelve los links correctos utilizando el método toContain.
      */
     it("Debería conseguir los links de una búsqueda de Google", async() => {
         const query = "stackoverflow";

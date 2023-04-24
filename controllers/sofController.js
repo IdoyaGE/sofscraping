@@ -5,7 +5,7 @@ import Question from "../models/question.js";
 import Answer from "../models/answer.js";
 /**
  * @function getContent -Con una función asíncrona se obtiene el contenido de la página web, incluyendo las preguntas y las respuestas.
- * @param {string} query -Es la consulta que utiliza para buscar en Google.
+ * @param {string} query -Consulta que utiliza para buscar en Google.
  * @returns {Object} -Te devuelve un objeto con las preguntas y las respuestas de la página web.
  */
 async function getContent(query) {
@@ -23,15 +23,15 @@ async function getContent(query) {
 //Incluimos las variables que queremos obtener de la página web
 
 /**
- * @function questionModel - Obtiene un modelo de pregunta para la obtención de datos de la web.
- *@param {Object} question - La pregunta que queremos obtener.
- *@param {string} question.query - La query asociada a la pregunta.
- *@param {string} question.title - El título de la pregunta.
- *@param {string} question.question - El contenido de la respuesta.
- *@param {string} question.user - El usuario.
- *@param {Date} question.date - La fecha.
- *@param {number} question.votes - El número de votos que ha recibido. 
- *@returns {Promise} - Te devuelve una promesa con los datos solicitados.
+ *@var questionModel -Modelo de pregunta para la obtención de datos de la web.
+ *@param {Object} question -Pregunta que realiza el usuario.
+ *@param {string} question.query -Query asociada a la pregunta.
+ *@param {string} question.title -Título de la pregunta.
+ *@param {string} question.question -Contenido de la respuesta.
+ *@param {string} question.user -Usuario que realiza la pregunta.
+ *@param {Date} question.date -Fecha de la pregunta.
+ *@param {number} question.votes -Número de votos que ha recibido la pregunta. 
+ *@returns {Promise} -Promesa con los datos solicitados.
 */
 
 

@@ -8,7 +8,7 @@ import fs from "fs";
  * @function
  * @name beforeAll
  * @memberof Parser
- * @returns  - Devuelve los elementos de las preguntas y respuestas del test.
+ * @returns  -Devuelve los elementos de las preguntas y respuestas del test.
  */
 
   describe("Parser", ()  => {
@@ -28,7 +28,7 @@ it('Debería obtener la pregunta de la página', () => {
 
 
 
-//PREGUNTA(QUESTION): devuelve la pregunta en formato DOM(Document Object Modelo).
+//PREGUNTA(QUESTION): devuelve la pregunta en formato DOM(Document Object Model).
 
   it ('Debería devolver la pregunta en formato DOM', () => {
   const question = parser.getQuestionAsDOM();

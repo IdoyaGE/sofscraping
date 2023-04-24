@@ -10,11 +10,11 @@ class Parser {
          * 
          * Constructor de la clase
          * @constructor 
-         * @param {string} html -html de la página web 
+         * @param {string} html -HTML de la página web 
          */
     constructor(html){
         /**
-         * @property {string} html -html de la página web
+         * @property {string} html -HTML de la página web
          * @private
          */
         this.html = html;   
@@ -24,7 +24,7 @@ class Parser {
 
 
     /**
-     * Carga el html en un objeto de tipo document
+     * Carga el HTML en un objeto de tipo document
      * @method 
      * @private
      * @returns document
@@ -66,7 +66,7 @@ getQuestion() {
 /**
      * Devuelve los títulos de las preguntas.
      * @method
-     * @returns {string[]} -títulos de la pregunta.
+     * @returns {string[]} -Títulos de la pregunta.
      */
 
 getQuestionTitle() {
@@ -76,19 +76,19 @@ getQuestionTitle() {
 /**
      * Devuelve los votos de las preguntas.
      * @method
-     * @returns {number} -votos de la pregunta.
+     * @returns {number} -Votos de la pregunta.
      */
 
 getQuestionVotes(element) {
     const votes =element.querySelector('.js-vote-count').textContent;
-    return parseInt(votes); 
+    return parseInt(votes); //para convertirlo en número
 
 }
 
 /**
      * Devuelve los autores de las preguntas.
      * @method
-     * @returns {string[]} - nombre del usuario que ha realizado la pregunta.
+     * @returns {string[]} -Nombre del usuario que ha realizado la pregunta.
      */
 
 getQuestionUser(element) {
@@ -98,7 +98,7 @@ getQuestionUser(element) {
 /**
      * Devuelve las fechas de las preguntas al añadir el atributo título. 
      * @method
-     * @returns {string[]} -fecha de la pregunta.
+     * @returns {string[]} -Fecha de la pregunta.
      */
 
 getQuestionDateTime(element) {
@@ -134,7 +134,7 @@ getAnswers () {
     /**
          * Devuelve los autores de la respuesta a las preguntas.
          * @method
-         * @returns {string[]} - Autores de la respuesta.
+         * @returns {string[]} -Autores de la respuesta.
          */
     
     getAnswerUser(element) {

@@ -20,7 +20,7 @@ class Scraper {
      * @async
      * @function init
      * @memberof Scraper
-     * @returns {Promise<void>}
+     * @returns {Promise}
      */
     async init() {
         // Inicializa una instancia de Puppeteer (para que no de problemas por estar en docker)
@@ -34,13 +34,13 @@ class Scraper {
     }
 
     /**
-     * Accede a una URL y devuelve el contenido de la página
+     * Accede a una URL y devuelve el contenido de la página.
      * 
      * @async
      * @function getPageContent
      * @memberof Scraper
-     * @param {string} url - La URL de la página
-     * @returns {Promise<string>} - El contenido de la página en formato de cadena
+     * @param {string} url -URL de la página.
+     * @returns {Promise<string>} -Contenido de la página en formato string.
      */
     async getPageContent(url) {
         // Accede a la URL especificada
@@ -63,5 +63,5 @@ class Scraper {
     }
 }
 
-// Exporta la clase Scraper para su uso en otros archivos
+// Exporta la clase Scraper para su uso en otros modulos.
 export default Scraper;
