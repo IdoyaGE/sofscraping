@@ -1,0 +1,31 @@
+version: "3"
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo-sofscraping
+    restart: always
+    environment:
+      MONGO_INITDB_DATABASE: sofscraping
+    ports:
+      - "27021:27017"
+    volumes:
+      - ~/sofscraping/mongo:/data/db
+    networks:
+      - sofscraping
+  node:
+    build: .
+    container_name: node-sofscraping
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongo
+    networks:
+      - sofscraping
+    volumes:
+      - ./:/usr/src/app
+      - exclude:/usr/src/app/node_modules/
+volumes:
+  exclude:
+networks:
+  sofscraping:
