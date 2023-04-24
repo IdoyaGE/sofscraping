@@ -74,7 +74,7 @@ it ('Debería devolver un array de la respuesta en formato DOM', () => {
 
 //RESPUESTA(VOTES): Test para verificar que la función devuelve los votos de la respuesta.
 
-  it('Debería obtener los votos de una respuesra', () => {
+  it('Debería obtener los votos de una respuesta', () => {
     const answer = parser.getAnswersAsDOM();
     const votes = parser.getAnswerVotes(answer[0]);
     expect(votes).toBe(105);

@@ -1,15 +1,28 @@
 import express from "express";
 import sofController from "./controllers/sofController.js";
-
+import path from "path";
 const app =express();
 /**
  * @route GET/
  * @desc Get stackoverflow content
  * 
  */
+app.get("/", async (req, res) => {
+    try{
+        const _dirname = path.resolve();
+        res.sendFile(_dirname + "/index.html");
+    }
+    catch(error){
+        console.log(error.message);
+        res.status(500).send("Ha habido un error");
+    }
+    });
 
-app.get('/', async (req, res) => {
-    const query = req.query.p;
+    
+
+
+app.get('/search', async (req, res) => {
+    const query = req.query.query;
     const {title,question,answers}= await sofController.getContent(query);
     res.send(`
     <link rel="stylesheet" type="text/css" href="https://cdn.sstatic.net/Shared/stacks.css?v=83d4b324173a">
